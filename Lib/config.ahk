@@ -1,5 +1,6 @@
-#include <definitions>
+#Include <definitions>
 #Include <logger>
+#Include <config>
 
 
 config_iniRead() {
