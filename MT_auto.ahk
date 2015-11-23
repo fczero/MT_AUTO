@@ -41,7 +41,8 @@ ExecScreen() {
 
 if !DEBUG_MODE {
 
-    multi_ParseParameters()
+    ; multi_ParseParameters()
+    config_iniRead()
 }
 
 multi_CloseIfRunning()
