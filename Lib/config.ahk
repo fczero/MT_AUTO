@@ -37,9 +37,6 @@ config_iniRead() {
     ;populate the arrays
     Loop, %mtCount%
     {
-        ; IniRead, SNR_Array[%A_Index%], MT_CONFIG_PATH, Section, Scenario%A_Index%
-        ; logger_Log("SNR:" . SNR_Array[%A_Index%])
-
         IniRead, outputVar, %MT_CONFIG_PATH%, %Section%, Scenario%A_Index%
         logger_Log("outputVar:" . outputVar)
         SNR_Array[%A_Index%] := outputVar
@@ -64,16 +61,6 @@ config_iniRead() {
         logger_Log("Filename:" . Filename)
         logger_Log("Section:" . Section)
         logger_Log("Key:" . Key)
-
-        ;Write which mode to use in array
-        ; IniWrite, mode, MT_SELECT_PATH, iniSection, MODE
-
-
-        ;Write which cards to use in array
-        ; IniWrite, card_ID%A_Index%, MT_SELECT_PATH, iniSection, CARD_ID
-
-        ;Write which port to use in 
-        ; IniWrite, port, MT_SELECT_PATH, iniSection, PORT_INDEX
 
     }
 }
